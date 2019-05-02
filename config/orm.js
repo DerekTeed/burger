@@ -27,9 +27,10 @@ var orm = {
             cb(result);
         });
     },
+    //Unfixable error here.
     updateOne: function (table, col1, val1, whereCol1, whereVal1, cb) {
         var query = "UPDATE ?? SET ??=? WHERE ??=?";
-        
+        console.log(query);
         connection.query(query, [table, col1, val1, whereCol1, whereVal1], function
             (err, res) {
             if (err) {
